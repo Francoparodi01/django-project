@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi Página Bonita</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        
+        p {
+            color: #666;
+            line-height: 1.5;
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1>header</h1>
+        </div>
+        <div>
+            {% extends 'base.html' %}
+            {% block content %}
+            <h1>{{title}}</h1>
+            <p>¡Esta es una página HTML bonita y simple!</p>
+            <p>lorem</p>
+            {% endblock %}
+        </div>
+    </div>
+
+</body>
+</html>

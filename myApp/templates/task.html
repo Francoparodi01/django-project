@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Website</title>
+</head>
+<body>
+    <div>
+        <div>
+            {% extends 'base.html' %}
+            {% block content %}
+        </div>
+        <h1>Tasks</h1>
+        <ul>
+            {% for task in tasks %}
+            <h1>{%if task.done == False %} ⌛ {% else %}  ✅ {{task.title}} {%endif%}</h1>
+
+            {% if task.done == False %}
+                <p>Tarea pendiente</p>
+            {% else %}
+                <p>Tarea completada</p>
+            {% endif%}
+
+            <div >
+                <h5>{{task.description}}</h5>
+                <p>el id del proyecto es: {{task.id}}</p>
+                <button>
+                    Delete
+                </button>
+                <button>
+                    ✓ Done
+                </button>
+            </div>
+            {% endfor %}
+        </ul>
+        {% endblock %}
+    </div>
+</body>
+</html>
